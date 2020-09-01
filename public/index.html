@@ -8,6 +8,78 @@
   </head>
   <body>
     <div id="app"></div>
-    <script src="bundle.js"></script>
+
+    <section class="peed">
+      <header class="peed-header">
+        <div class="user-profile">
+          <img class="thumbnail" src="" alt="" />
+          <span class="nickname"></span>
+        </div>
+      </header>
+      <div class="main-pictures">
+        <ul class="pictures">
+          <li class="picture">
+            <img src="" alt="" />
+          </li>
+        </ul>
+      </div>
+      <div class="peed-info">
+        <div class="tabs">
+          <div class="tab">
+            <span class="like">
+              <button type="button"></button>
+            </span>
+            <span class="comment">
+              <button type="button"></button>
+            </span>
+            <span class="share">
+              <button type="button"></button>
+            </span>
+          </div>
+          <div class="pictures-length"></div>
+          <div class="save"></div>
+        </div>
+        <div class="likes">
+          <button type="button">
+            좋아요
+            <span class="likes-length">0개</span>
+          </button>
+        </div>
+        <div class="contents">
+          <span class="nickname"></span>
+          <span class="content"></span>
+          <span class="more">
+            <button type="button">더보기</button>
+          </span>
+        </div>
+        <div class="comments">
+          <a class="comments-length" href="">
+            <span>댓글 0개 모두 보기</span>
+          </a>
+          <ul class="comment-lists">
+            <li class="list">
+              <div class="comment-info">
+                <span class="nickname">
+                  <a href=""></a>
+                </span>
+                <span class="list"></span>
+              </div>
+            </li>
+          </ul>
+          <div class="since">
+            <a href="">
+              <span>3일 전</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="comment-area">
+        <form action="POST">
+          <textarea class="input-comment" name="" id="" placeholder="댓글 달기..."></textarea>
+          <button type="button">게시</button>
+        </form>
+      </div>
+    </section>
+    <!-- <script src="bundle.js"></script> -->
   </body>
 </html>
