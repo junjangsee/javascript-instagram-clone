@@ -9,11 +9,20 @@
   <body>
     <div id="app"></div>
 
-    <section class="peed">
+    <article class="peed">
       <header class="peed-header">
         <div class="user-profile">
-          <img class="thumbnail" src="" alt="" />
-          <span class="nickname"></span>
+          <a class="thumbnail" href="">
+            <img src="" alt="userthumbnail" />
+          </a>
+          <a class="nickname" href="">
+            <span>junjangsee</span>
+          </a>
+        </div>
+        <div class="user-tab">
+          <button type="button">
+            <img src="../src/images/more.png" alt="" />
+          </button>
         </div>
       </header>
       <div class="main-pictures">
@@ -23,63 +32,81 @@
           </li>
         </ul>
       </div>
-      <div class="peed-info">
-        <div class="tabs">
-          <div class="tab">
-            <span class="like">
-              <button type="button"></button>
-            </span>
-            <span class="comment">
-              <button type="button"></button>
-            </span>
-            <span class="share">
-              <button type="button"></button>
+      <div class="peed-detail">
+        <div class="peed-info">
+          <div class="tabs">
+            <div class="left-tab">
+              <span class="like">
+                <img src="../src/images/heart.png" alt="" />
+              </span>
+              <span class="comment">
+                <img src="../src/images/comment.png" alt="" />
+              </span>
+              <span class="share">
+                <img src="../src/images/share.png" alt="" />
+              </span>
+            </div>
+            <div class="right-tab">
+              <span class="pictures-length"></span>
+              <span class="save">
+                <img src="../src/images/save.png" alt="" />
+              </span>
+            </div>
+          </div>
+          <div class="likes">
+            <button type="button">
+              좋아요
+              <span class="likes-length">234,522개</span>
+            </button>
+          </div>
+          <div class="contents">
+            <span class="nickname">junjangsee</span>
+            <span class="content"
+              >마크업 해보는 중입니다마크업 해보는 중입니다마크업 해보는 중입니다마크업 해보는
+              중입니다마크업 해보는 중입니다마크업 해보는 중입니다마크업 해보는 중입니다마크업
+              해보는 중입니다</span
+            >
+            <span class="more">
+              <button type="button">더보기</button>
             </span>
           </div>
-          <div class="pictures-length"></div>
-          <div class="save"></div>
-        </div>
-        <div class="likes">
-          <button type="button">
-            좋아요
-            <span class="likes-length">0개</span>
-          </button>
-        </div>
-        <div class="contents">
-          <span class="nickname"></span>
-          <span class="content"></span>
-          <span class="more">
-            <button type="button">더보기</button>
-          </span>
-        </div>
-        <div class="comments">
-          <a class="comments-length" href="">
-            <span>댓글 0개 모두 보기</span>
-          </a>
-          <ul class="comment-lists">
-            <li class="list">
-              <div class="comment-info">
-                <span class="nickname">
-                  <a href=""></a>
-                </span>
-                <span class="list"></span>
-              </div>
-            </li>
-          </ul>
-          <div class="since">
-            <a href="">
-              <span>3일 전</span>
+          <div class="comments">
+            <a class="comments-length" href="">
+              <span>댓글 124,522개 모두 보기</span>
             </a>
+            <ul class="comment-lists">
+              <li class="list">
+                <div class="comment-info">
+                  <span class="nickname">
+                    <a href="">olaf</a>
+                  </span>
+                  <span class="list">열심히 하고 있군요!</span>
+                </div>
+              </li>
+              <li class="list">
+                <div class="comment-info">
+                  <span class="nickname">
+                    <a href="">developer</a>
+                  </span>
+                  <span class="list">화이팅하세요!!!</span>
+                </div>
+              </li>
+            </ul>
+            <div class="since">
+              <a href="">
+                <span>3일 전</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div class="comment-area">
         <form action="POST">
-          <textarea class="input-comment" name="" id="" placeholder="댓글 달기..."></textarea>
+          <textarea class="text-comment" placeholder="댓글 달기..."></textarea>
           <button type="button">게시</button>
         </form>
       </div>
-    </section>
+    </article>
     <!-- <script src="bundle.js"></script> -->
   </body>
 </html>
