@@ -14,10 +14,12 @@ const mockData = [
     content: '컴포넌트를 분리하는 것은 아주 중요합니다. 번들링 개념 또한 중요하죠',
     comments: [
       {
+        id: 1,
         nickname: 'olaf',
         comment: '열심히 하고 있군요!',
       },
       {
+        id: 2,
         nickname: 'goodjoob',
         comment: '화이팅하세요!',
       },
