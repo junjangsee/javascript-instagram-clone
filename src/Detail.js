@@ -50,9 +50,10 @@ class Detail {
             <span>댓글 ${this.comments.length}개 모두 보기</span>
           </a>
           <ul class="comment-lists">
-          ${this.comments.map(
-            (comment) =>
-              `
+          ${this.comments
+            .map(
+              (comment) =>
+                `
               <li class="list">
                 <div class="comment-info">
                   <span class="nickname">
@@ -62,7 +63,8 @@ class Detail {
                 </div>
               </li>
               `
-          )}
+            )
+            .join('')}
           </ul>
           <div class="since">
             <a href="">
