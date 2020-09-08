@@ -1,12 +1,15 @@
-class Header {
-  constructor(thumbnail, nickname) {
+const Component = require('./lib/Component');
+
+class Header extends Component {
+  constructor(parent, thumbnail, nickname) {
+    super(parent);
     this.thumbnail = thumbnail;
     this.nickname = nickname;
   }
 
   render() {
     return `
-    <header class="peed-header">
+    <header class="feed-header">
       <div class="user-profile">
         <a class="thumbnail" href="">
           <img src="${this.thumbnail}" alt="userthumbnail" />

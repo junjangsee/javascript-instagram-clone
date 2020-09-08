@@ -1,5 +1,8 @@
-class Detail {
-  constructor(nickname, likes, content, comments, date) {
+const Component = require('./lib/Component');
+
+class Detail extends Component {
+  constructor(parent, nickname, likes, content, comments, date) {
+    super(parent);
     this.nickname = nickname;
     this.likes = likes;
     this.content = content;
@@ -7,10 +10,18 @@ class Detail {
     this.date = date;
   }
 
+  // 이런 이벤트를 많이 만들면 index에서 엄청 많이 호출해야함
+  likeEvent() {
+    const likeButton = document.getElementsByClassName('like');
+    likeButton[0].addEventListener('click', (e) => {
+      console.log(e.currentTarget);
+    });
+  }
+
   render() {
     return `
-      <div class="peed-detail">
-      <div class="peed-info">
+      <div class="feed-detail">
+      <div class="feed-info">
         <div class="tabs">
           <div class="left-tab">
             <span class="like">

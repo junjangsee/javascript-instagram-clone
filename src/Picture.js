@@ -1,5 +1,8 @@
-class Picture {
-  constructor(pictures) {
+const Component = require('./lib/Component');
+
+class Picture extends Component {
+  constructor(parent, pictures) {
+    super(parent);
     this.pictures = pictures;
   }
 
