@@ -25,27 +25,27 @@ textarea {
   resize: none;
 }
 
-.peed {
+.feed {
   width: 616px;
   margin: 0 0 15px 0;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
 }
 
-.peed > .peed-header {
+.feed > .feed-header {
   display: flex;
   justify-content: space-between;
   height: 60px;
   padding: 16px;
 }
 
-.peed > .peed-header > .user-profile {
+.feed > .feed-header > .user-profile {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.peed > .peed-header > .user-profile > .thumbnail > img {
+.feed > .feed-header > .user-profile > .thumbnail > img {
   display: block;
   width: 32px;
   height: 32px;
@@ -53,101 +53,101 @@ textarea {
   border-radius: 50%;
 }
 
-.peed > .peed-header > .user-profile > .nickname > span {
+.feed > .feed-header > .user-profile > .nickname > span {
   display: block;
   font-size: 14px;
   font-weight: 700;
 }
 
-.peed > .peed-header > .user-tab {
+.feed > .feed-header > .user-tab {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.peed > .peed-header > .user-tab > button {
+.feed > .feed-header > .user-tab > button {
   cursor: pointer;
 }
 
-.peed > .main-pictures {
+.feed > .main-pictures {
   overflow: hidden;
 }
 
-.peed > .main-pictures > .pictures > .picture > img {
+.feed > .main-pictures > .pictures > .picture > img {
   width: 100%;
   height: auto;
 }
 
-.peed > .peed-detail {
+.feed > .feed-detail {
   padding: 0 16px;
 }
 
-.peed > .peed-detail > .peed-info > .tabs {
+.feed > .feed-detail > .feed-info > .tabs {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 2px 0 0 0;
 }
 
-.peed > .peed-detail > .peed-info > .tabs > .left-tab > span {
+.feed > .feed-detail > .feed-info > .tabs > .left-tab > span {
   margin: 0 0 0 7px;
   cursor: pointer;
 }
 
-.peed > .peed-detail > .peed-info > .tabs > .left-tab > span:first-child {
+.feed > .feed-detail > .feed-info > .tabs > .left-tab > span:first-child {
   margin: 0 0 0 0;
   cursor: pointer;
 }
 
-.peed > .peed-detail > .peed-info > .tabs > .left-tab > span:first-child > img {
+.feed > .feed-detail > .feed-info > .tabs > .left-tab > span:first-child > img {
   width: 26px;
   height: 24px;
 }
 
-.peed > .peed-detail > .peed-info > .likes > button {
+.feed > .feed-detail > .feed-info > .likes > button {
   font-size: 14px;
   font-weight: 600;
 }
 
-.peed > .peed-detail > .peed-info > .likes > button {
+.feed > .feed-detail > .feed-info > .likes > button {
   font-size: 14px;
   font-weight: 500;
 }
 
-.peed > .peed-detail > .peed-info > .contents {
+.feed > .feed-detail > .feed-info > .contents {
   margin: 6px 0 0 0;
   font-size: 14px;
 }
 
-.peed > .peed-detail > .peed-info > .contents > .nickname {
+.feed > .feed-detail > .feed-info > .contents > .nickname {
   font-weight: 700;
 }
 
-.peed > .peed-detail > .peed-info > .contents > .content {
+.feed > .feed-detail > .feed-info > .contents > .content {
   overflow-wrap: break-word;
 }
 
-.peed > .peed-detail > .peed-info > .contents > .more > button {
+.feed > .feed-detail > .feed-info > .contents > .more > button {
   color: #8e8e8e;
 }
 
-.peed > .peed-detail > .peed-info > .comments {
+.feed > .feed-detail > .feed-info > .comments {
   margin: 6px 0 0 0;
   font-size: 14px;
 }
 
-.peed > .peed-detail > .peed-info > .comments > .comments-length {
+.feed > .feed-detail > .feed-info > .comments > .comments-length {
   font-size: 14px;
   color: #8e8e8e;
 }
 
-.peed > .peed-detail > .peed-info > .comments > .comment-lists > .list {
+.feed > .feed-detail > .feed-info > .comments > .comment-lists > .list {
   margin: 7px 0 0 0;
 }
 
-.peed
-  > .peed-detail
-  > .peed-info
+.feed
+  > .feed-detail
+  > .feed-info
   > .comments
   > .comment-lists
   > .list
@@ -158,29 +158,29 @@ textarea {
   font-weight: 700;
 }
 
-.peed > .peed-detail > .peed-info > .comments > .since > a > span {
+.feed > .feed-detail > .feed-info > .comments > .since > a > span {
   margin: 7px 0 0 0;
   font-size: 10px;
   color: #8e8e8e;
 }
 
-.peed > .comment-area {
+.feed > .comment-area {
   margin: 7px 0 0 0;
   padding: 20px 16px;
   border-top: 1px solid #dbdbdb;
 }
 
-.peed > .comment-area > form {
+.feed > .comment-area > form {
   display: flex;
   align-items: center;
 }
 
-.peed > .comment-area > form > .text-comment {
+.feed > .comment-area > form > .text-comment {
   width: 95%;
   height: 18px;
 }
 
-.peed > .comment-area > form > button {
+.feed > .comment-area > form > button {
   color: #0095f6;
   font-weight: 700;
   cursor: pointer;

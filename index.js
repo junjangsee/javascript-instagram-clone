@@ -1,8 +1,17 @@
 const datas = require('./data.json');
-const Peed = require('./src/Peed');
+const { subject } = require('./src/lib/Subject');
 
-const peeds = datas.map((data) => new Peed(data));
+const Feed = require('./src/Feed');
+const Header = require('./src/Header');
+const Picture = require('./src/Picture');
+const Detail = require('./src/Detail');
 
-const app = document.getElementById('app');
+datas.forEach((data) => {
+  const feed = new Feed();
+  new Header(feed, data.thumbnail, data.nickname);
+  new Picture(feed, data.pictures);
+  new Detail(feed, data.nickname, data.likes, data.content, data.comments, data.date);
+});
 
-app.innerHTML += peeds.map((peed) => peed.render()).join('');
+console.log(subject);
+subject.render();
