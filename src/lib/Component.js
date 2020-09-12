@@ -14,6 +14,16 @@ class Component extends Observable {
   addChild(child) {
     this.components.push(child);
   }
+
+  render() {}
+
+  mount() {
+    this.components.forEach((component) => component.mount());
+  }
+
+  updated() {}
+
+  end() {}
 }
 
 module.exports = Component;

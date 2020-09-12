@@ -69,6 +69,21 @@ textarea {
   cursor: pointer;
 }
 
+.feed > .carousel-wrapper {
+  overflow: hidden;
+}
+
+.feed > .carousel-wrapper > .carousel {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s;
+}
+
+.feed > .carousel-wrapper > .carousel > .image {
+  width: 100%;
+  height: auto;
+}
+
 .feed > .main-pictures {
   overflow: hidden;
 }
