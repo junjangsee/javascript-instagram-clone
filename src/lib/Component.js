@@ -1,7 +1,11 @@
 const Observable = require('./Observable');
 
+const uniqueId = Math.floor(Math.random() * 10000000);
+let uniqueIdCount = uniqueId;
+
 class Component extends Observable {
   components = [];
+  id = '';
 
   constructor(parent) {
     super();
@@ -9,6 +13,7 @@ class Component extends Observable {
     if (parent) {
       parent.addChild(this);
     }
+    this.id = `component_id_${uniqueIdCount++}`;
   }
 
   addChild(child) {

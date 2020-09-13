@@ -6,39 +6,48 @@ class Carousel extends Component {
     super(parent);
     this.images = images;
     this.startIndex = startIndex;
+    this.mount = this.mount.bind(this);
+    this.prev = this.prev.bind(this);
+    this.next = this.next.bind(this);
   }
 
   mount() {
-    const maxLength = this.images.length;
-    let index = this.startIndex;
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const carousel = document.querySelector('.carousel');
+    this.carousel = document.querySelector(`#${this.id}`);
+    const prevButton = this.carousel.parentElement.children[1];
+    const nextButton = this.carousel.parentElement.children[2];
 
     prevButton.addEventListener('click', () => {
-      if (index === 0) return;
-      index -= 1;
-
-      carousel.style.transform = `translate3d(-${614 * index}px, 0, 0)`;
+      this.prev();
     });
 
     nextButton.addEventListener('click', () => {
-      if (index === maxLength - 1) return;
-      index += 1;
-
-      carousel.style.transform = `translate3d(-${614 * index}px, 0, 0)`;
+      this.next();
     });
+  }
+
+  prev() {
+    if (this.startIndex === 0) return;
+    this.startIndex -= 1;
+
+    this.carousel.style.transform = `translate3d(-${614 * this.startIndex}px, 0, 0)`;
+  }
+
+  next() {
+    if (this.startIndex === this.images.length - 1) return;
+    this.startIndex += 1;
+
+    this.carousel.style.transform = `translate3d(-${614 * this.startIndex}px, 0, 0)`;
   }
 
   render() {
     return `
         <div class="carousel-wrapper">
-            <div class="carousel">
+            <div class="carousel" id=${this.id}>
                 ${this.images.map((image) => new Image(this, image.image).render()).join('')}
             </div>
+            <button class="prev" type="button">prev</button>
+            <button class="next" type="button">next</button>
         </div>
-        <button class="prev" type="button">prev</button>
-        <button class="next" type="button">next</button>
       `;
   }
 }

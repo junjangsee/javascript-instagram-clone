@@ -10,14 +10,6 @@ class Detail extends Component {
     this.date = date;
   }
 
-  // 이런 이벤트를 많이 만들면 index에서 엄청 많이 호출해야함
-  likeEvent() {
-    const likeButton = document.getElementsByClassName('like');
-    likeButton[0].addEventListener('click', (e) => {
-      console.log(e.currentTarget);
-    });
-  }
-
   render() {
     return `
       <div class="feed-detail">
