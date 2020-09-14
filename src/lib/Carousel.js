@@ -1,5 +1,5 @@
 const Component = require('./Component');
-const Image = require('./Image');
+const Image = require('../components/Image');
 
 class Carousel extends Component {
   constructor(parent, images, startIndex = 0) {
@@ -13,6 +13,7 @@ class Carousel extends Component {
 
   mount() {
     this.carousel = document.querySelector(`#${this.id}`);
+
     const prevButton = this.carousel.parentElement.children[1];
     const nextButton = this.carousel.parentElement.children[2];
 
@@ -43,10 +44,9 @@ class Carousel extends Component {
     return `
         <div class="carousel-wrapper">
             <div class="carousel" id=${this.id}>
-                ${this.images.map((image) => new Image(this, image.image).render()).join('')}
+                ${this.images.map((image) => new Image({ src: image.image }).render()).join('')}
             </div>
-            <button class="prev" type="button">prev</button>
-            <button class="next" type="button">next</button>
+            ${this.components.map((component) => component.render()).join('')}
         </div>
       `;
   }
