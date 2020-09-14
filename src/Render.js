@@ -1,6 +1,6 @@
 const Carousel = require('./lib/Carousel');
-const Button = require('./lib/Button');
-const Text = require('./lib/Text');
+const Button = require('./components/Button');
+const Text = require('./components/Text');
 const Feed = require('./Feed');
 const Header = require('./Header');
 const Detail = require('./Detail');
@@ -15,21 +15,21 @@ class Render {
       const feed = new Feed();
       new Header(feed, data.thumbnail, data.nickname);
       const carousel = new Carousel(feed, data.images, 0);
-      new Detail(feed, data.nickname, data.likes, data.content, data.comments, data.date);
       const prevButton = new Button({
-        parent: feed,
+        parent: carousel,
         type: 'button',
         className: 'prev',
         onClick: carousel.prev,
       });
+      new Text({ parent: prevButton, text: '이전', tag: 'span' });
       const nextButton = new Button({
-        parent: feed,
+        parent: carousel,
         type: 'button',
         className: 'next',
         onClick: carousel.next,
       });
-      new Text(prevButton, '이전', 'span');
-      new Text(nextButton, '다음', 'span');
+      new Text({ parent: nextButton, text: '다음', tag: 'span' });
+      new Detail(feed, data.nickname, data.likes, data.content, data.comments, data.date);
     });
   }
 }

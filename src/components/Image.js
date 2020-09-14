@@ -1,7 +1,7 @@
-const Component = require('./Component');
+const Component = require('../lib/Component');
 
 class Image extends Component {
-  constructor(parent, src) {
+  constructor({ parent, src }) {
     super(parent);
     this.src = src;
   }

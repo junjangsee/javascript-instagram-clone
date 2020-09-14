@@ -1,7 +1,7 @@
-const Component = require('./Component');
+const Component = require('../lib/Component');
 
 class Text extends Component {
-  constructor(parent, text, tag) {
+  constructor({ parent, text, tag }) {
     super(parent);
     this.text = text;
     this.tag = tag;

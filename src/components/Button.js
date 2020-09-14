@@ -1,4 +1,4 @@
-const Component = require('./Component');
+const Component = require('../lib/Component');
 
 class Button extends Component {
   constructor({ parent = null, type = 'button', className = null, onClick = null }) {
@@ -8,18 +8,18 @@ class Button extends Component {
     this.onClick = onClick;
   }
 
-  render() {
-    return `<button id="${this.id}" class="${this.className}" type="${
-      this.type
-    }">${this.components.map((component) => component.render()).join('')}</button>`;
-  }
-
   mount() {
     if (this.onClick === null) return;
     const button = document.getElementById(this.id);
     button.addEventListener('click', () => {
       this.onClick();
     });
+  }
+
+  render() {
+    return `<button id="${this.id}" class="${this.className}" type="${
+      this.type
+    }">${this.components.map((component) => component.render()).join('')}</button>`;
   }
 }
 
