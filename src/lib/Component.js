@@ -20,7 +20,9 @@ class Component extends Observable {
     this.components.push(child);
   }
 
-  render() {}
+  render() {
+    this.components.map((component) => component.render());
+  }
 
   mount() {
     this.components.forEach((component) => component.mount());

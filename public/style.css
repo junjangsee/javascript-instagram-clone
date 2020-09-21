@@ -25,6 +25,141 @@ textarea {
   resize: none;
 }
 
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: white;
+  z-index: 99999;
+}
+
+.main-header > .header-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.main-header > .header-wrapper > .logo > a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 257px;
+}
+
+.main-header > .header-wrapper > .logo > a > img {
+  width: 103px;
+  height: 29px;
+}
+
+.main-header > .header-wrapper > .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  height: 28px;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+  cursor: text;
+}
+
+.main-header > .header-wrapper > .search > img {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0 4px 0 0;
+}
+
+.main-header > .header-wrapper > .search > span {
+  color: #8e8e8e;
+  font-size: 13px;
+}
+
+.main-header > .header-wrapper > .tabs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 300px;
+}
+
+.main-header > .header-wrapper > .tabs > div {
+  width: 28px;
+  height: 28px;
+  margin: 0 14px 0 0;
+}
+
+.main-header > .header-wrapper > .tabs > div > a > img {
+  width: 26px;
+  height: 26px;
+}
+
+.main-header > .header-wrapper > .tabs > div > button > img {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  padding: 100px 0 0;
+}
+
+.main > .realtime-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 614px;
+  height: 118px;
+  border: 1px solid #dbdbdb;
+}
+
+.main > .realtime-wrapper > .realtime {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.main > .realtime-wrapper > .realtime > .people {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 0 15px;
+}
+
+.main > .realtime-wrapper > .realtime > .people > .person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px 0 0;
+}
+
+.main > .realtime-wrapper > .realtime > .people > .person > .image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at bottom left, #f58529 20%, #c42d91);
+  border-radius: 100%;
+  margin: 0 0 7px 0;
+}
+
+.main > .realtime-wrapper > .realtime > .people > .person > .image-wrapper > img {
+  width: 54px;
+  height: 54px;
+  border: 1px solid #dbdbdb;
+  border-radius: 100%;
+}
+
 .feed {
   width: 616px;
   margin: 0 0 15px 0;
@@ -82,6 +217,7 @@ textarea {
 .feed > .carousel-wrapper > .carousel > .image {
   width: 100%;
   height: auto;
+  z-index: 1;
 }
 
 .feed > .main-pictures {

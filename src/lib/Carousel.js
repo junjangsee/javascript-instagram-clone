@@ -1,5 +1,5 @@
 const Component = require('./Component');
-const Image = require('../components/Image');
+const Image = require('../components/shared/Image');
 
 class Carousel extends Component {
   constructor(parent, images, startIndex = 0) {
