@@ -1,8 +1,8 @@
-const Component = require('./lib/Component');
+const Component = require('../../lib/Component');
 
 class Feed extends Component {
-  constructor() {
-    super();
+  constructor({ parent = null }) {
+    super(parent);
   }
 
   render() {

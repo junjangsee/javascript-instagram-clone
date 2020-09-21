@@ -1,4 +1,4 @@
-const Component = require('./lib/Component');
+const Component = require('../../lib/Component');
 
 class Header extends Component {
   constructor(parent, thumbnail, nickname) {

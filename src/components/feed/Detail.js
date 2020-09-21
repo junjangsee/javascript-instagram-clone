@@ -1,4 +1,4 @@
-const Component = require('./lib/Component');
+const Component = require('../../lib/Component');
 
 class Detail extends Component {
   constructor(parent, nickname, likes, content, comments, date) {

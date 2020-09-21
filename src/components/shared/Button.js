@@ -1,4 +1,4 @@
-const Component = require('../lib/Component');
+const Component = require('../../lib/Component');
 
 class Button extends Component {
   constructor({ parent = null, type = 'button', className = null, onClick = null }) {
