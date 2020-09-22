@@ -8,7 +8,8 @@ class RecommendBox extends Component {
   render() {
     return `
         <div class="recommend-all">
-            <span>회원님을 위한 추천</span><a href="">모두 보기</a>
+            <span>회원님을 위한 추천</span>
+            <a href="">모두 보기</a>
         </div>`;
   }
 }

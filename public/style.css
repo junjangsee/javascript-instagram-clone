@@ -42,13 +42,18 @@ textarea {
   justify-content: space-around;
   align-items: center;
   width: 80%;
+  padding: 0px 50px;
+}
+
+.main-header > .header-wrapper > .logo {
+  padding: 0px 0 0 15px;
 }
 
 .main-header > .header-wrapper > .logo > a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 257px;
+  width: 280px;
 }
 
 .main-header > .header-wrapper > .logo > a > img {
@@ -104,22 +109,28 @@ textarea {
   cursor: pointer;
 }
 
-.main {
-  width: 100%;
+.main-wrapper {
+  width: 65%;
   height: auto;
+  margin: 0 auto;
   padding: 100px 0 0;
 }
 
-.main > .realtime-wrapper {
+.main-wrapper > .main {
+  position: relative;
+}
+
+.main-wrapper > .main > .realtime-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 614px;
   height: 118px;
   border: 1px solid #dbdbdb;
+  margin: 0 0 27px 0;
 }
 
-.main > .realtime-wrapper > .realtime {
+.main-wrapper > .main > .realtime-wrapper > .realtime {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -128,32 +139,33 @@ textarea {
   overflow: hidden;
 }
 
-.main > .realtime-wrapper > .realtime > .people {
+.main-wrapper > .main > .realtime-wrapper > .realtime > .people {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 0 0 15px;
 }
 
-.main > .realtime-wrapper > .realtime > .people > .person {
+.main-wrapper > .main > .realtime-wrapper > .realtime > .people > .person {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 20px 0 0;
+  cursor: pointer;
 }
 
-.main > .realtime-wrapper > .realtime > .people > .person > .image-wrapper {
+.main-wrapper > .main > .realtime-wrapper > .realtime > .people > .person > .image-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
   background: radial-gradient(circle at bottom left, #f58529 20%, #c42d91);
   border-radius: 100%;
   margin: 0 0 7px 0;
 }
 
-.main > .realtime-wrapper > .realtime > .people > .person > .image-wrapper > img {
+.main-wrapper > .main > .realtime-wrapper > .realtime > .people > .person > .image-wrapper > img {
   width: 54px;
   height: 54px;
   border: 1px solid #dbdbdb;
@@ -335,4 +347,171 @@ textarea {
   color: #0095f6;
   font-weight: 700;
   cursor: pointer;
+}
+
+.aside-wrapper {
+  position: fixed;
+  right: 250px;
+  top: 120px;
+}
+
+.aside-wrapper > .recommend-aside {
+  display: flex;
+  flex-direction: column;
+  width: 293px;
+  height: 56px;
+}
+
+.aside-wrapper > .recommend-aside > .user-recommend-profile {
+  display: flex;
+  align-items: center;
+  margin: 0 0 23px 0;
+}
+
+.aside-wrapper > .recommend-aside > .user-recommend-profile > img {
+  width: 54px;
+  height: 54px;
+  border: 1px solid #dbdbdb;
+  border-radius: 100%;
+  margin: 0 15px 0 0;
+}
+
+.aside-wrapper > .recommend-aside > .user-recommend-profile > .user-recommend {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-wrapper > .recommend-aside > .user-recommend-profile > .user-recommend > a {
+  margin: 0 0 3px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.aside-wrapper > .recommend-aside > .user-recommend-profile > .user-recommend > span {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.aside-wrapper > .recommend-aside > .recommend-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.aside-wrapper > .recommend-aside > .recommend-all > span {
+  color: #8e8e8e;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.aside-wrapper > .recommend-aside > .recommend-all > a {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.aside-wrapper > .recommend-aside > .recommend-users > .recommenders {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+}
+
+.aside-wrapper > .recommend-aside > .recommend-users > .recommenders > .recommender-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+
+.aside-wrapper
+  > .recommend-aside
+  > .recommend-users
+  > .recommenders
+  > .recommender-profile
+  > .profile {
+  display: flex;
+}
+
+.aside-wrapper
+  > .recommend-aside
+  > .recommend-users
+  > .recommenders
+  > .recommender-profile
+  > .profile
+  > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin: 0 10px 0 0;
+}
+
+.aside-wrapper
+  > .recommend-aside
+  > .recommend-users
+  > .recommenders
+  > .recommender-profile
+  > .profile
+  > .recommender-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-wrapper
+  > .recommend-aside
+  > .recommend-users
+  > .recommenders
+  > .recommender-profile
+  > .profile
+  > .recommender-info
+  > .nickname {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.aside-wrapper
+  > .recommend-aside
+  > .recommend-users
+  > .recommenders
+  > .recommender-profile
+  > .profile
+  > .recommender-info
+  > .follow {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.aside-wrapper
+  > .recommend-aside
+  > .recommend-users
+  > .recommenders
+  > .recommender-profile
+  > button {
+  color: #0095f6;
+  font-weight: 600;
+}
+
+.aside-wrapper > .recommend-aside > .footer-wrapper {
+  font-size: 11px;
+  font-weight: 400;
+  color: #c7c7c7;
+}
+
+.aside-wrapper > .recommend-aside > .footer-wrapper > .main-footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 20px 0;
+  line-height: 15px;
+  letter-spacing: 0.2px;
+}
+
+.aside-wrapper > .recommend-aside > .footer-wrapper > .main-footer > .footer-text::after {
+  content: '∙';
+}
+
+.aside-wrapper
+  > .recommend-aside
+  > .footer-wrapper
+  > .main-footer
+  > .footer-text:last-child::after {
+  content: '';
 }

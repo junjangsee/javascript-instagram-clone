@@ -12,15 +12,17 @@ const Profile = require('../components/aside/Profile');
 const RecommendBox = require('../components/aside/RecommendBox');
 const Recommend = require('../components/aside/Recommend');
 const Container = require('../components/shared/Container');
+const Footer = require('../components/aside/Footer');
 
 class MainPage extends Page {
-  constructor(feeds, followers, myInfo, people) {
+  constructor(feeds, followers, myInfo, people, footers) {
     super();
     new Header();
-    const container = new Container({ tag: 'section', className: 'main' });
-    new Realtime({ parent: container, people: people });
+    const mainWrapper = new Container({ tag: 'section', className: 'main-wrapper' });
+    const main = new Container({ parent: mainWrapper, tag: 'div', className: 'main' });
+    new Realtime({ parent: main, people: people });
     feeds.forEach((data) => {
-      const feed = new Feed({ parent: container });
+      const feed = new Feed({ parent: main });
       new FeedHeader(feed, data.thumbnail, data.nickname);
       const carousel = new Carousel(feed, data.images, 0);
       const prevButton = new Button({
@@ -39,7 +41,12 @@ class MainPage extends Page {
       new Text({ parent: nextButton, text: '다음', tag: 'span' });
       new Detail(feed, data.nickname, data.likes, data.content, data.comments, data.date);
     });
-    const aside = new Aside();
+    const asideContainer = new Container({
+      parent: main,
+      tag: 'aside',
+      className: 'aside-wrapper',
+    });
+    const aside = new Aside({ parent: asideContainer });
     new Profile({
       parent: aside,
       nickname: myInfo.nickname,
@@ -48,6 +55,7 @@ class MainPage extends Page {
     });
     new RecommendBox({ parent: aside });
     new Recommend({ parent: aside, users: followers });
+    new Footer({ parent: aside, footers: footers });
   }
 }
 

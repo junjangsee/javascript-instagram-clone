@@ -11,14 +11,17 @@ class Recommend extends Component {
                 <div class="recommenders">
                     ${this.users
                       .map(
-                        (user) => `<div class="recommender-profile">
-                    <img src="${user.thumbnail}" />
-                    <div class="recommender-info">
-                        <span class="nickname">${user.nickname}</span>
-                        <span class="follow">회원님을 팔로우합니다</span>
-                    </div>
-                    <button type="button">팔로우</button> 
-                </div>`
+                        (user) =>
+                          `<div class="recommender-profile">
+                              <div class="profile">
+                                <img src="${user.thumbnail}" />
+                                <div class="recommender-info">
+                                  <span class="nickname">${user.nickname}</span>
+                                  <span class="follow">회원님을 팔로우합니다</span>
+                                </div>
+                              </div>
+                              <button type="button">팔로우</button> 
+                           </div>`
                       )
                       .join('')}
                 </div>

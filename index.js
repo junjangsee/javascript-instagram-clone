@@ -42,6 +42,20 @@ const people = [
   },
 ];
 
-const page = new MainPage(datas, followers, myInfo, people);
+const footers = [
+  '소개',
+  '도움말',
+  '홍보 센터',
+  'API',
+  '채용 정보',
+  '개인정보처리방침',
+  '약관',
+  '위치',
+  '인기 계정',
+  '해시 태그',
+  '언어',
+];
+
+const page = new MainPage(datas, followers, myInfo, people, footers);
 page.render();
 page.mount();
