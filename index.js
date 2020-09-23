@@ -43,6 +43,18 @@ const profileInfo = {
       nickname: 'following2',
     },
   ],
+  stories: [
+    {
+      title: '코딩스타그램',
+      thumbnail:
+        'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
+    },
+    {
+      title: '개스타그램',
+      thumbnail:
+        'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
+    },
+  ],
 };
 
 const followers = [
