@@ -9,23 +9,31 @@ class Profile extends Component {
   render() {
     return `<div class="profile-wrapper">
                 <div class="profile">
-                    <img src="${this.profileInfo.thumbnail}" />
+                    <div class="thumbnail">
+                        <img src="${this.profileInfo.thumbnail}" />
+                    </div>
                     <div class="profile-info">
                         <div class="profile-tabs">
-                            <span>${this.profileInfo.nickname}</span>
-                            <button type="button">메시지 보내기</button>
-                            <button type="button"><span class="following"></span></button>
-                            <button type="button"><span class="scroll"></span></button>
-                            <button type="button"><span class="more"></span></button>
+                            <h2 class="nickname">${this.profileInfo.nickname}</h2>
+                            <button type="button" class="direct-message">메시지 보내기</button>
+                            <button type="button" class="following"><img src="../src/images/following.png"></button>
+                            <button type="button" class="scroll"><img src="../src/images/scroll.png"></button>
+                            <button type="button" class="more"><img src="../src/images/more2.png"></button>
                         </div>
                         <div class="profile-status">
                             <dl class="status">
-                                <dt>게시물</dt>
-                                <dd>${this.profileInfo.posts.length}</dd>
-                                <dt>팔로워</dt>
-                                <dd>${this.profileInfo.followers.length}</dd>
-                                <dt>팔로우</dt>
-                                <dd>${this.profileInfo.followings.length}</dd>
+                                <div class="posts">
+                                    <dt>게시물</dt>
+                                    <dd>${this.profileInfo.posts.length}</dd>
+                                </div>
+                                <div class="follower">
+                                    <dt>팔로워</dt>
+                                    <dd>${this.profileInfo.followers.length}</dd>
+                                </div>
+                                <div class="follow">
+                                    <dt>팔로우</dt>
+                                    <dd>${this.profileInfo.followings.length}</dd>
+                                <div>
                             </dl>
                         </div>
                         <div class="profile-description">

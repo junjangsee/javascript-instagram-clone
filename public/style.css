@@ -526,5 +526,291 @@ textarea {
   width: 65%;
   height: auto;
   margin: 0 auto;
-  padding: 90px 0 0;
+  padding: 80px 0 0;
+}
+
+.container-wrapper > .container > .profile-wrapper > .profile {
+  display: flex;
+  align-items: center;
+}
+
+.container-wrapper > .container > .profile-wrapper > .profile > .thumbnail {
+  padding: 0 65px;
+}
+
+.container-wrapper > .container > .profile-wrapper > .profile > .thumbnail > img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #dbdbdb;
+  border-radius: 100%;
+}
+
+.container-wrapper > .container > .profile-wrapper > .profile > .profile-info {
+  padding: 0 45px;
+}
+
+.container-wrapper > .container > .profile-wrapper > .profile > .profile-info > .profile-tabs {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .nickname {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0 15px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .nickname {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0 20px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .direct-message {
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 5px 9px;
+  font-weight: 600;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  background-color: #fafafa;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .following {
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  width: 74px;
+  height: 28px;
+  padding: 5px 9px;
+  cursor: pointer;
+  margin: 0 8px 0 0;
+  background-color: #fafafa;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .following
+  > img {
+  width: 24px;
+  height: 16px;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .scroll {
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  width: 34px;
+  height: 28px;
+  padding: 5px 9px;
+  cursor: pointer;
+  margin: 0 4px 0 0;
+  background-color: #fafafa;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .scroll
+  > img {
+  width: 10px;
+  height: 9px;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .more {
+  width: 34px;
+  height: 28px;
+  padding: 5px 9px;
+  cursor: pointer;
+  background-color: #fafafa;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-tabs
+  > .more
+  > img {
+  width: 30px;
+  height: 14px;
+}
+
+.container-wrapper > .container > .profile-wrapper > .profile > .profile-info > .profile-status {
+  margin: 0 0 20px 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status {
+  display: flex;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .posts {
+  display: flex;
+  margin: 0 60px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .posts
+  > dt {
+  margin: 0 5px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .posts
+  > dd {
+  font-weight: 700;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .follower {
+  display: flex;
+  margin: 0 60px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .follower
+  > dt {
+  margin: 0 5px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .follower
+  > dd {
+  font-weight: 700;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .follow {
+  display: flex;
+  margin: 0 60px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .follow
+  > dt {
+  margin: 0 5px 0 0;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-status
+  > .status
+  > .follow
+  > dd {
+  font-weight: 700;
+}
+
+.container-wrapper
+  > .container
+  > .profile-wrapper
+  > .profile
+  > .profile-info
+  > .profile-description
+  > h1 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 0 4px 0;
 }
