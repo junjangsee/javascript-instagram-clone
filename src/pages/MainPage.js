@@ -15,7 +15,7 @@ const Container = require('../components/shared/Container');
 const Footer = require('../components/aside/Footer');
 
 class MainPage extends Page {
-  constructor(feeds, followers, myInfo, people, footers) {
+  constructor(feeds, followers, profileInfo, people, footers) {
     super();
     new Header();
     const mainWrapper = new Container({ tag: 'section', className: 'main-wrapper' });
@@ -49,9 +49,9 @@ class MainPage extends Page {
     const aside = new Aside({ parent: asideContainer });
     new Profile({
       parent: aside,
-      nickname: myInfo.nickname,
-      name: myInfo.name,
-      thumbnail: myInfo.thumbnail,
+      nickname: profileInfo.nickname,
+      name: profileInfo.name,
+      thumbnail: profileInfo.thumbnail,
     });
     new RecommendBox({ parent: aside });
     new Recommend({ parent: aside, users: followers });
