@@ -515,3 +515,16 @@ textarea {
   > .footer-text:last-child::after {
   content: '';
 }
+
+.container-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+}
+
+.container-wrapper > .container {
+  width: 65%;
+  height: auto;
+  margin: 0 auto;
+  padding: 90px 0 0;
+}

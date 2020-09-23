@@ -1,11 +1,48 @@
 const datas = require('./data.json');
 const MainPage = require('./src/pages/MainPage');
+const ProfilePage = require('./src/pages/ProfilePage');
 
-const myInfo = {
+const profileInfo = {
   nickname: 'junjangsee',
   name: '김준형',
+  description: '코딩은 재밌지만 어렵네요...',
   thumbnail:
     'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
+  posts: [
+    {
+      id: 1,
+      title: '코딩 중',
+      comment: '어려움의 연속이다.',
+      images: [
+        {
+          id: 1,
+          image:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
+        },
+        {
+          id: 2,
+          image:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
+        },
+      ],
+    },
+  ],
+  followers: [
+    {
+      nickname: 'follower1',
+    },
+    {
+      nickname: 'follower2',
+    },
+  ],
+  followings: [
+    {
+      nickname: 'following1',
+    },
+    {
+      nickname: 'following2',
+    },
+  ],
 };
 
 const followers = [
@@ -56,6 +93,9 @@ const footers = [
   '언어',
 ];
 
-const page = new MainPage(datas, followers, myInfo, people, footers);
-page.render();
-page.mount();
+// const mainPage = new MainPage(datas, followers, profileInfo, people, footers);
+const profilePage = new ProfilePage(profileInfo);
+// mainPage.render();
+// mainPage.mount();
+profilePage.render();
+profilePage.mount();
