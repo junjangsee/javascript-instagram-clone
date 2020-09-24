@@ -4,6 +4,7 @@ const Container = require('../components/shared/Container');
 const Profile = require('../components/profile/Profile');
 const Story = require('../components/profile/Story');
 const Tab = require('../components/profile/Tab');
+const Post = require('../components/profile/Post');
 
 class ProfilePage extends Page {
   constructor(profileInfo) {
@@ -18,6 +19,7 @@ class ProfilePage extends Page {
     new Profile(container, profileInfo);
     new Story(container, profileInfo.stories);
     new Tab(container);
+    new Post(container, profileInfo.posts);
   }
 }
 
