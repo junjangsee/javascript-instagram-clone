@@ -26,6 +26,57 @@ const profileInfo = {
         },
       ],
     },
+    {
+      id: 2,
+      title: '코딩 중2',
+      comment: '어려움의 연속이다2.',
+      images: [
+        {
+          id: 1,
+          image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtzfgVAiFqLmcrULkb5qDJ16hlDgsMsB83EQ&usqp=CAU',
+        },
+        {
+          id: 2,
+          image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtzfgVAiFqLmcrULkb5qDJ16hlDgsMsB83EQ&usqp=CAU',
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: '코딩 중3',
+      comment: '어려움의 연속이다3.',
+      images: [
+        {
+          id: 1,
+          image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxmp7sE1ggI4_L7NGZWcQT9EyKaqKLeQ5RBg&usqp=CAU',
+        },
+        {
+          id: 2,
+          image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxmp7sE1ggI4_L7NGZWcQT9EyKaqKLeQ5RBg&usqp=CAU',
+        },
+      ],
+    },
+    {
+      id: 4,
+      title: '코딩 중4',
+      comment: '어려움의 연속이다4.',
+      images: [
+        {
+          id: 1,
+          image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJUMcJ_LKxo5MA0RX7rPMKCRZN81U3xOkUfg&usqp=CAU',
+        },
+        {
+          id: 2,
+          image:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJUMcJ_LKxo5MA0RX7rPMKCRZN81U3xOkUfg&usqp=CAU',
+        },
+      ],
+    },
   ],
   followers: [
     {
