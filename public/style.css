@@ -915,3 +915,30 @@ textarea {
   width: 293px;
   height: 293px;
 }
+
+.container-wrapper > .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 150px;
+  background-color: #fafafa;
+  height: 104px;
+}
+
+.container-wrapper > .footer-wrapper > .main-footer {
+  display: flex;
+  align-items: center;
+}
+
+.container-wrapper > .footer-wrapper > .main-footer > .footer-text {
+  color: #00376b;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 14px 0 0;
+}
+
+.container-wrapper > .footer-wrapper > span {
+  color: #8e8e8e;
+  font-size: 12px;
+  font-weight: 600;
+}

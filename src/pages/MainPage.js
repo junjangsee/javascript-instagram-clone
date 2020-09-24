@@ -12,7 +12,7 @@ const Profile = require('../components/aside/Profile');
 const RecommendBox = require('../components/aside/RecommendBox');
 const Recommend = require('../components/aside/Recommend');
 const Container = require('../components/shared/Container');
-const Footer = require('../components/aside/Footer');
+const Footer = require('../components/Footer');
 
 class MainPage extends Page {
   constructor(feeds, followers, profileInfo, people, footers) {

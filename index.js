@@ -157,7 +157,7 @@ const footers = [
 ];
 
 // const mainPage = new MainPage(datas, followers, profileInfo, people, footers);
-const profilePage = new ProfilePage(profileInfo);
+const profilePage = new ProfilePage(profileInfo, footers);
 // mainPage.render();
 // mainPage.mount();
 profilePage.render();

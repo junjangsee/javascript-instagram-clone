@@ -5,9 +5,10 @@ const Profile = require('../components/profile/Profile');
 const Story = require('../components/profile/Story');
 const Tab = require('../components/profile/Tab');
 const Post = require('../components/profile/Post');
+const Footer = require('../components/Footer');
 
 class ProfilePage extends Page {
-  constructor(profileInfo) {
+  constructor(profileInfo, footers) {
     super();
     new Header();
     const containerWrapper = new Container({ tag: 'div', className: 'container-wrapper' });
@@ -20,6 +21,7 @@ class ProfilePage extends Page {
     new Story(container, profileInfo.stories);
     new Tab(container);
     new Post(container, profileInfo.posts);
+    new Footer({ parent: containerWrapper, footers: footers });
   }
 }
 
