@@ -850,3 +850,46 @@ textarea {
   font-size: 14px;
   font-weight: 600;
 }
+
+.container-wrapper > .container > .tab-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #dbdbdb;
+}
+
+.container-wrapper > .container > .tab-wrapper > .tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+}
+
+.container-wrapper > .container > .tab-wrapper > .tabs > .tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+}
+
+.container-wrapper > .container > .tab-wrapper > .tabs > .tab > img {
+  width: 14px;
+  height: 14px;
+  margin: 0 5px 0 0;
+}
+
+.container-wrapper > .container > .tab-wrapper > .tabs > .tab > span {
+  color: #8e8e8e;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.container-wrapper > .container > .tab-wrapper > .tabs .on {
+  border-top: 1px solid black;
+}
+
+.container-wrapper > .container > .tab-wrapper > .tabs .on > span {
+  color: black;
+}
