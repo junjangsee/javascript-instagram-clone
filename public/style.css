@@ -893,3 +893,25 @@ textarea {
 .container-wrapper > .container > .tab-wrapper > .tabs .on > span {
   color: black;
 }
+
+.container-wrapper > .container > .posts-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-wrapper > .container > .posts-wrapper > .posts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 28px 0;
+}
+
+.container-wrapper > .container > .posts-wrapper > .posts > .post {
+  width: 293px;
+  height: 293px;
+}
+
+.container-wrapper > .container > .posts-wrapper > .posts > .post > a > img {
+  width: 293px;
+  height: 293px;
+}
