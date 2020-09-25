@@ -156,9 +156,9 @@ const footers = [
   '언어',
 ];
 
-// const mainPage = new MainPage(datas, followers, profileInfo, people, footers);
-const profilePage = new ProfilePage(profileInfo, footers);
-// mainPage.render();
-// mainPage.mount();
-profilePage.render();
-profilePage.mount();
+const mainPage = new MainPage(datas, followers, profileInfo, people, footers);
+// const profilePage = new ProfilePage(profileInfo, footers);
+mainPage.render();
+mainPage.mount();
+// profilePage.render();
+// profilePage.mount();

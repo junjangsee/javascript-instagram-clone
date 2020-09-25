@@ -1,6 +1,6 @@
 const Component = require('../../lib/Component');
 
-class Recommend extends Component {
+class Recommender extends Component {
   constructor({ parent, users }) {
     super(parent);
     this.users = users;
@@ -31,4 +31,4 @@ class Recommend extends Component {
   }
 }
 
-module.exports = Recommend;
+module.exports = Recommender;

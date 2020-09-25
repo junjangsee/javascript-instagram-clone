@@ -9,7 +9,7 @@ class Container extends Component {
 
   render() {
     return `<${this.tag} class="${this.className}">
-                ${this.components.map((component) => component.render()).join('')}
+                ${this.renderToString()}
             </${this.tag}>`;
   }
 }

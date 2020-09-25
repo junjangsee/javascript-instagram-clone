@@ -6,9 +6,7 @@ class Feed extends Component {
   }
 
   render() {
-    return `<article class="feed">${this.components
-      .map((component) => component.render())
-      .join('')}</article>`;
+    return `<article class="feed">${this.renderToString()}</article>`;
   }
 }
 

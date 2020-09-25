@@ -5,6 +5,7 @@ let uniqueIdCount = uniqueId;
 
 class Component extends Observable {
   components = [];
+  stringComponents = '';
   id = '';
 
   constructor(parent) {
@@ -18,6 +19,15 @@ class Component extends Observable {
 
   addChild(child) {
     this.components.push(child);
+  }
+
+  renderToString() {
+    if (this.components.length === 0) {
+      return null;
+    }
+
+    this.components.map((component) => (this.stringComponents += component.render()));
+    return this.stringComponents;
   }
 
   render() {
