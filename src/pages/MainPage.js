@@ -7,11 +7,11 @@ const Feed = require('../components/feed/Feed');
 const FeedHeader = require('../components/feed/Header');
 const Detail = require('../components/feed/Detail');
 const Page = require('../lib/Page');
-const Aside = require('../components/aside/Aside');
-const Profile = require('../components/aside/Profile');
-const RecommendBox = require('../components/aside/RecommendBox');
-const Recommend = require('../components/aside/Recommend');
 const Container = require('../components/shared/Container');
+const Recommend = require('../components/recommend/Recommend');
+const Profile = require('../components/recommend/Profile');
+const Recommends = require('../components/recommend/Recommends');
+const Recommender = require('../components/recommend/Recommender');
 const Footer = require('../components/Footer');
 
 class MainPage extends Page {
@@ -21,6 +21,7 @@ class MainPage extends Page {
     const mainWrapper = new Container({ tag: 'section', className: 'main-wrapper' });
     const main = new Container({ parent: mainWrapper, tag: 'div', className: 'main' });
     new Realtime({ parent: main, people: people });
+
     feeds.forEach((data) => {
       const feed = new Feed({ parent: main });
       new FeedHeader(feed, data.thumbnail, data.nickname);
@@ -41,21 +42,22 @@ class MainPage extends Page {
       new Text({ parent: nextButton, text: '다음', tag: 'span' });
       new Detail(feed, data.nickname, data.likes, data.content, data.comments, data.date);
     });
+
     const asideContainer = new Container({
       parent: main,
       tag: 'aside',
       className: 'aside-wrapper',
     });
-    const aside = new Aside({ parent: asideContainer });
+    const recommend = new Recommend({ parent: asideContainer });
     new Profile({
-      parent: aside,
+      parent: recommend,
       nickname: profileInfo.nickname,
       name: profileInfo.name,
       thumbnail: profileInfo.thumbnail,
     });
-    new RecommendBox({ parent: aside });
-    new Recommend({ parent: aside, users: followers });
-    new Footer({ parent: aside, footers: footers });
+    new Recommends({ parent: recommend });
+    new Recommender({ parent: recommend, users: followers });
+    new Footer({ parent: recommend, footers: footers });
   }
 }
 
