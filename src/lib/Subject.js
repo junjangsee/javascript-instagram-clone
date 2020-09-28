@@ -6,7 +6,7 @@ class Subject {
   }
 
   render() {
-    this.app.innerHTML += this.observerCollection.map((component) => component.render()).join('');
+    this.app.innerHTML = this.observerCollection.map((component) => component.render()).join('');
   }
 
   mount() {
@@ -17,6 +17,10 @@ class Subject {
 
   registration(observer) {
     this.observerCollection.push(observer);
+  }
+
+  reset() {
+    this.observerCollection = [];
   }
 }
 

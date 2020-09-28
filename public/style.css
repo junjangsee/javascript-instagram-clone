@@ -46,20 +46,29 @@ textarea {
 }
 
 .main-header > .header-wrapper > .logo {
-  padding: 0px 0 0 15px;
-}
-
-.main-header > .header-wrapper > .logo > a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 280px;
+  padding: 0px 0 0 15px;
 }
 
-.main-header > .header-wrapper > .logo > a > img {
+.main-header > .header-wrapper > .logo > img {
   width: 103px;
   height: 29px;
 }
+
+/* .main-header > .header-wrapper > .logo > a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 280px;
+} */
+/* 
+.main-header > .header-wrapper > .logo > a > img {
+  width: 103px;
+  height: 29px;
+} */
 
 .main-header > .header-wrapper > .search {
   display: flex;
@@ -92,7 +101,15 @@ textarea {
   width: 300px;
 }
 
-.main-header > .header-wrapper > .tabs > div {
+.main-header > .header-wrapper > .tabs > button > img {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 0 14px 0 0;
+  cursor: pointer;
+}
+
+/* .main-header > .header-wrapper > .tabs > div {
   width: 28px;
   height: 28px;
   margin: 0 14px 0 0;
@@ -107,7 +124,7 @@ textarea {
   width: 26px;
   height: 26px;
   cursor: pointer;
-}
+} */
 
 .main-wrapper {
   width: 65%;

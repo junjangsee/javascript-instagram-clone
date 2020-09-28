@@ -19,7 +19,7 @@ class Button extends Component {
   render() {
     return `<button id="${this.id}" class="${this.className}" type="${
       this.type
-    }">${this.components.map((component) => component.render()).join('')}</button>`;
+    }">${this.renderToString()}</button>`;
   }
 }
 
