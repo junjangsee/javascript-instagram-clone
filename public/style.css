@@ -969,7 +969,7 @@ textarea {
   background-color: #7d7d7d;
 }
 
-.post-wrapper > img {
+.post-wrapper > .exit-button > img {
   position: absolute;
   top: 20px;
   right: 19px;
