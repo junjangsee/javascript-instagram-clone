@@ -11,7 +11,7 @@ const Image = require('../components/shared/Image');
 const { profileInfo, footers } = require('./mocks/datas');
 
 class ProfilePage extends Page {
-  constructor(router) {
+  constructor({ router }) {
     super(router);
     const header = new Header();
     const homeButton = new Button({
@@ -67,7 +67,7 @@ class ProfilePage extends Page {
     new Profile(container, profileInfo);
     new Story(container, profileInfo.stories);
     new Tab(container);
-    new Post(container, profileInfo.posts);
+    new Post(container, profileInfo.posts, router);
     new Footer({ parent: containerWrapper, footers: footers });
   }
 }

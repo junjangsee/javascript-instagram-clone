@@ -10,7 +10,7 @@ const Button = require('../components/shared/Button');
 const Image = require('../components/shared/Image');
 
 class MainPage extends Page {
-  constructor(router) {
+  constructor({ router }) {
     super(router);
     const header = new Header();
     const homeButton = new Button({
