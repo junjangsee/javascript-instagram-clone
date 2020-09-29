@@ -40,14 +40,15 @@ class Post extends Component {
       for (let j = 0; j < this.getSeparatePosts()[i].length; j += 1) {
         const post = document.createElement('div');
         post.classList.add('post');
+        post.id = this.getSeparatePosts()[i][j].id;
 
-        const a = document.createElement('a');
-        a.href = '';
+        const button = document.createElement('button');
+        button.classList.add('post-button');
         const img = document.createElement('img');
         img.src = this.getSeparatePosts()[i][j].images[0].image;
 
-        a.appendChild(img);
-        post.appendChild(a);
+        button.appendChild(img);
+        post.appendChild(button);
         postsEl.appendChild(post);
       }
 
