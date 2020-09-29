@@ -9,6 +9,19 @@ const profileInfo = {
       id: 1,
       title: '코딩 중',
       comment: '어려움의 연속이다.',
+      date: '2020-09-28',
+      comments: [
+        {
+          nickname: 'umbrella_ryu',
+          content: '이게 바로 댓글이다.',
+          date: '2020-09-28',
+        },
+        {
+          nickname: 'king_programmer',
+          content: '이게 바로 코딩이다.',
+          date: '2020-09-29',
+        },
+      ],
       images: [
         {
           id: 1,
@@ -26,6 +39,19 @@ const profileInfo = {
       id: 2,
       title: '코딩 중2',
       comment: '어려움의 연속이다2.',
+      date: '2020-09-25',
+      comments: [
+        {
+          nickname: 'umbrella_ryu',
+          content: '이게 바로 댓글이다.',
+          date: '2020-09-28',
+        },
+        {
+          nickname: 'king_programmer',
+          content: '이게 바로 코딩이다.',
+          date: '2020-09-29',
+        },
+      ],
       images: [
         {
           id: 1,
@@ -43,6 +69,19 @@ const profileInfo = {
       id: 3,
       title: '코딩 중3',
       comment: '어려움의 연속이다3.',
+      date: '2020-05-25',
+      comments: [
+        {
+          nickname: 'umbrella_ryu',
+          content: '이게 바로 댓글이다.',
+          date: '2020-09-28',
+        },
+        {
+          nickname: 'king_programmer',
+          content: '이게 바로 코딩이다.',
+          date: '2020-09-29',
+        },
+      ],
       images: [
         {
           id: 1,
@@ -60,6 +99,19 @@ const profileInfo = {
       id: 4,
       title: '코딩 중4',
       comment: '어려움의 연속이다4.',
+      date: '2020-06-11',
+      comments: [
+        {
+          nickname: 'umbrella_ryu',
+          content: '이게 바로 댓글이다.',
+          date: '2020-09-28',
+        },
+        {
+          nickname: 'king_programmer',
+          content: '이게 바로 코딩이다.',
+          date: '2020-09-29',
+        },
+      ],
       images: [
         {
           id: 1,
