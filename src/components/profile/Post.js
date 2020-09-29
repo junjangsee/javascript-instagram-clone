@@ -1,9 +1,39 @@
 const Component = require('../../lib/Component');
 
 class Post extends Component {
-  constructor(parent, posts) {
+  constructor(parent, posts, router) {
     super(parent);
     this.posts = posts;
+    this.router = router;
+  }
+
+  mount() {
+    this.getPostIds().forEach((postId) => {
+      document.querySelector(`#post_${postId}`).addEventListener('click', () => {
+        this.router.setData(this.getPostInfo(postId));
+        this.router.push('/post');
+      });
+    });
+  }
+
+  getPostIds() {
+    const posts = this.posts.map((post) => {
+      return post.id;
+    });
+
+    return posts;
+  }
+
+  getPostInfo(postId) {
+    const postInfo = this.posts.reduce((acc, curr) => {
+      if (curr.id === postId) {
+        acc.push(curr);
+      }
+
+      return acc;
+    }, []);
+
+    return postInfo;
   }
 
   getSeparatePosts() {
@@ -40,7 +70,7 @@ class Post extends Component {
       for (let j = 0; j < this.getSeparatePosts()[i].length; j += 1) {
         const post = document.createElement('div');
         post.classList.add('post');
-        post.id = this.getSeparatePosts()[i][j].id;
+        post.id = `post_${this.getSeparatePosts()[i][j].id}`;
 
         const button = document.createElement('button');
         button.classList.add('post-button');

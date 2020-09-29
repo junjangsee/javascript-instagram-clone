@@ -931,6 +931,7 @@ textarea {
 .container-wrapper > .container > .posts-wrapper > .posts > .post > button > img {
   width: 293px;
   height: 293px;
+  cursor: pointer;
 }
 
 .container-wrapper > .footer-wrapper {

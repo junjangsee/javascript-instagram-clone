@@ -1,10 +1,14 @@
 const Component = require('../../lib/Component');
 
 class Content extends Component {
-  constructor({ parent, thumbnail, nickname }) {
+  constructor({ parent, thumbnail, nickname, description, date, comments, likes }) {
     super(parent);
     this.thumbnail = thumbnail;
     this.nickname = nickname;
+    this.description = description;
+    this.date = date;
+    this.comments = comments;
+    this.likes = likes;
   }
 
   render() {
@@ -29,50 +33,37 @@ class Content extends Component {
                   <div class="content">
                     <div class="detail">
                       <span class="nickname">${this.nickname}</span>
-                      <span class="description">안녕하세요 저는 김준형입니다. 안녕하세요 저는 김준형입니다. 안녕하세요 저는 김준형입니다. 안녕하세요 저는 김준형입니다. 안녕하세요 저는 김준형입니다. 안녕하세요 저는 김준형입니다. 안녕하세요 저는 김준형입니다.</span>
+                      <span class="description">${this.description}</span>
                     </div>
                     <div class="date">
-                      <span>2020-05-20</span>
+                      <span>${this.date}</span>
                     </div>
                   </div>
                 </div>
                 <div class="comments">
-                  <div class="comment">
-                    <img class="thumbnail" src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E" />
-                    <div class="comment-detail">
-                      <div class="detail">
-                        <span class="nickname">umbrella_ryu</span>
-                        <span class="description">오오오</span>
-                      </div>
-                      <div class="date">
-                        <span>1주</span>
-                        <button type="button">답글 달기</button>
-                      </div>
-                      <div class="comment-list">
-                        <span>⎯⎯⎯⎯⎯</span>
-                        <button type="button">답글 보기(1개)</button>
-                      </div>
-                    </div>
-                    <img class="heart" src="../src/images/heart.png" />
-                  </div>
-                  <div class="comment">
-                    <img class="thumbnail" src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E" />
-                    <div class="comment-detail">
-                      <div class="detail">
-                        <span class="nickname">umbrella_ryu</span>
-                        <span class="description">오오오</span>
-                      </div>
-                      <div class="date">
-                        <span>1주</span>
-                        <button type="button">답글 달기</button>
-                      </div>
-                      <div class="comment-list">
-                        <span>⎯⎯⎯⎯⎯</span>
-                        <button type="button">답글 보기(1개)</button>
-                      </div>
-                    </div>
-                    <img class="heart" src="../src/images/heart.png" />
-                  </div>
+                  ${this.comments
+                    .map(
+                      (comment) =>
+                        `<div class="comment">
+                        <img class="thumbnail" src="${comment.thumbnail}" />
+                        <div div class="comment-detail">
+                          <div class="detail">
+                            <span class="nickname">${comment.nickname}</span>
+                            <span class="description">${comment.content}</span>
+                          </div>
+                          <div class="date">
+                            <span>${comment.date}</span>
+                            <button type="button">답글 달기</button>
+                          </div>
+                          <div class="comment-list">
+                            <span>⎯⎯⎯⎯⎯</span>
+                            <button type="button">답글 보기(1개)</button>
+                          </div>
+                        </div>
+                        <img class="heart" src="../src/images/heart.png" />
+                      </div>`
+                    )
+                    .join('')}
                 </div>
               </div>
               <div class="tabs-wrapper">
@@ -90,10 +81,10 @@ class Content extends Component {
                   </div>
                 </div>
                 <div class="like-count">
-                  <span>좋아요 345개</span>
+                  <span>좋아요 ${this.likes}개</span>
                 </div>
                 <div class="date">
-                  <span>3일 전<span>
+                  <span>${this.date}<span>
                 </div>
               </div>
               <div class="comment-area">

@@ -7,29 +7,32 @@ const profileInfo = {
   posts: [
     {
       id: 1,
+      nickname: 'junjangsee',
       title: '코딩 중',
-      comment: '어려움의 연속이다.',
+      description: '어려움의 연속이다.',
+      thumbnail:
+        'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
       date: '2020-09-28',
+      likes: 124,
       comments: [
         {
           nickname: 'umbrella_ryu',
           content: '이게 바로 댓글이다.',
           date: '2020-09-28',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
         {
           nickname: 'king_programmer',
           content: '이게 바로 코딩이다.',
           date: '2020-09-29',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
       ],
       images: [
         {
           id: 1,
-          image:
-            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
-        },
-        {
-          id: 2,
           image:
             'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
@@ -37,29 +40,32 @@ const profileInfo = {
     },
     {
       id: 2,
+      nickname: 'junjangsee',
       title: '코딩 중2',
-      comment: '어려움의 연속이다2.',
+      description: '어려움의 연속이다2.',
+      thumbnail:
+        'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
       date: '2020-09-25',
+      likes: 11,
       comments: [
         {
           nickname: 'umbrella_ryu',
           content: '이게 바로 댓글이다.',
           date: '2020-09-28',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
         {
           nickname: 'king_programmer',
           content: '이게 바로 코딩이다.',
           date: '2020-09-29',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
       ],
       images: [
         {
           id: 1,
-          image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtzfgVAiFqLmcrULkb5qDJ16hlDgsMsB83EQ&usqp=CAU',
-        },
-        {
-          id: 2,
           image:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtzfgVAiFqLmcrULkb5qDJ16hlDgsMsB83EQ&usqp=CAU',
         },
@@ -67,29 +73,32 @@ const profileInfo = {
     },
     {
       id: 3,
+      nickname: 'junjangsee',
       title: '코딩 중3',
-      comment: '어려움의 연속이다3.',
+      description: '어려움의 연속이다3.',
+      thumbnail:
+        'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
       date: '2020-05-25',
+      likes: 1,
       comments: [
         {
           nickname: 'umbrella_ryu',
           content: '이게 바로 댓글이다.',
           date: '2020-09-28',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
         {
           nickname: 'king_programmer',
           content: '이게 바로 코딩이다.',
           date: '2020-09-29',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
       ],
       images: [
         {
           id: 1,
-          image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxmp7sE1ggI4_L7NGZWcQT9EyKaqKLeQ5RBg&usqp=CAU',
-        },
-        {
-          id: 2,
           image:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxmp7sE1ggI4_L7NGZWcQT9EyKaqKLeQ5RBg&usqp=CAU',
         },
@@ -97,29 +106,32 @@ const profileInfo = {
     },
     {
       id: 4,
+      nickname: 'junjangsee',
       title: '코딩 중4',
-      comment: '어려움의 연속이다4.',
+      description: '어려움의 연속이다4.',
+      thumbnail:
+        'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
       date: '2020-06-11',
+      likes: 112,
       comments: [
         {
           nickname: 'umbrella_ryu',
           content: '이게 바로 댓글이다.',
           date: '2020-09-28',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
         {
           nickname: 'king_programmer',
           content: '이게 바로 코딩이다.',
           date: '2020-09-29',
+          thumbnail:
+            'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
         },
       ],
       images: [
         {
           id: 1,
-          image:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJUMcJ_LKxo5MA0RX7rPMKCRZN81U3xOkUfg&usqp=CAU',
-        },
-        {
-          id: 2,
           image:
             'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRJUMcJ_LKxo5MA0RX7rPMKCRZN81U3xOkUfg&usqp=CAU',
         },
