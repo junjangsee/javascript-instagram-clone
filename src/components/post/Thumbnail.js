@@ -6,7 +6,7 @@ class Thumbnail extends Component {
   }
 
   render() {
-    return `<div class="thumnail-wrapper">
+    return `<div class="thumbnail-wrapper">
                 ${this.renderToString()}
             </div>`;
   }

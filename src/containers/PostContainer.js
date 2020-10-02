@@ -1,7 +1,9 @@
 const Component = require('../lib/Component');
 const Thumbnail = require('../components/post/Thumbnail');
+const Button = require('../components/shared/Button');
 const Image = require('../components/shared/Image');
 const Content = require('../components/post/Content');
+const Carousel = require('../lib/Carousel');
 const { profileInfo } = require('../pages/mocks/datas');
 
 class PostContainer extends Component {
@@ -18,12 +20,21 @@ class PostContainer extends Component {
     });
 
     const thumbnail = new Thumbnail({ parent: parent });
-    post[0].images.forEach((image) => {
-      new Image({
-        parent: thumbnail,
-        src: image.image,
-      });
+    const carousel = new Carousel(thumbnail, post[0].images, 0);
+    const prevButton = new Button({
+      parent: carousel,
+      type: 'button',
+      className: 'prev',
+      onClick: carousel.prev,
     });
+    new Image({ parent: prevButton, src: '../../src/images/left-arrow.png' });
+    const nextButton = new Button({
+      parent: carousel,
+      type: 'button',
+      className: 'next',
+      onClick: carousel.next,
+    });
+    new Image({ parent: nextButton, src: '../../src/images/right-arrow.png' });
     new Content({
       parent: parent,
       thumbnail: post[0].thumbnail,

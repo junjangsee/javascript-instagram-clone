@@ -234,7 +234,26 @@ textarea {
 }
 
 .feed > .carousel-wrapper {
+  position: relative;
   overflow: hidden;
+  width: 100%;
+  margin: 0 0 -15px 0;
+}
+
+.feed > .carousel-wrapper > button > img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.feed > .carousel-wrapper > .prev > img {
+  left: 2%;
+  top: 45%;
+}
+
+.feed > .carousel-wrapper > .next > img {
+  right: 2%;
+  top: 45%;
 }
 
 .feed > .carousel-wrapper > .carousel {
@@ -988,14 +1007,45 @@ textarea {
   background-color: white;
 }
 
-.post-wrapper > .post > .thumnail-wrapper {
+.post-wrapper > .post > .thumbnail-wrapper {
   width: 480px;
   height: 600px;
 }
 
-.post-wrapper > .post > .thumnail-wrapper > img {
+.post-wrapper > .post > .thumbnail-wrapper > .carousel-wrapper {
+  position: relative;
+  overflow: hidden;
   width: 480px;
   height: 600px;
+}
+
+.post-wrapper > .post > .thumbnail-wrapper > .carousel-wrapper > .carousel {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s;
+  width: 480px;
+  height: 600px;
+}
+
+.post-wrapper > .post > .thumbnail-wrapper > .carousel-wrapper > .carousel > .image {
+  width: 100%;
+  height: auto;
+}
+
+.post-wrapper > .post > .thumbnail-wrapper > .carousel-wrapper > button > img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.post-wrapper > .post > .thumbnail-wrapper > .carousel-wrapper > .prev > img {
+  left: 2%;
+  top: 50%;
+}
+
+.post-wrapper > .post > .thumbnail-wrapper > .carousel-wrapper > .next > img {
+  right: 2%;
+  top: 50%;
 }
 
 .post-wrapper > .post > .content-wrapper > .header-wrapper > .content-header {
