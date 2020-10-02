@@ -366,10 +366,12 @@ textarea {
   cursor: pointer;
 }
 
-.aside-wrapper {
-  position: fixed;
-  right: 250px;
-  top: 120px;
+@media screen and (min-width: 1440px) {
+  .aside-wrapper {
+    position: fixed;
+    right: 250px;
+    top: 120px;
+  }
 }
 
 .aside-wrapper > .recommend-aside {
