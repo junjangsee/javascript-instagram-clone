@@ -14,30 +14,32 @@ class Carousel extends Component {
   mount() {
     this.carousel = document.querySelector(`#${this.id}`);
 
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    const carouselWidth = window.getComputedStyle(carouselWrapper).width.replace('px', '');
     const prevButton = this.carousel.parentElement.children[1];
     const nextButton = this.carousel.parentElement.children[2];
 
     prevButton.addEventListener('click', () => {
-      this.prev();
+      this.prev(carouselWidth);
     });
 
     nextButton.addEventListener('click', () => {
-      this.next();
+      this.next(carouselWidth);
     });
   }
 
-  prev() {
+  prev(width) {
     if (this.startIndex === 0) return;
     this.startIndex -= 1;
 
-    this.carousel.style.transform = `translate3d(-${614 * this.startIndex}px, 0, 0)`;
+    this.carousel.style.transform = `translate3d(-${width * this.startIndex}px, 0, 0)`;
   }
 
-  next() {
+  next(width) {
     if (this.startIndex === this.images.length - 1) return;
     this.startIndex += 1;
 
-    this.carousel.style.transform = `translate3d(-${614 * this.startIndex}px, 0, 0)`;
+    this.carousel.style.transform = `translate3d(-${width * this.startIndex}px, 0, 0)`;
   }
 
   render() {
