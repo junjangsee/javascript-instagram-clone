@@ -385,12 +385,16 @@ textarea {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .aside-wrapper {
-    position: fixed;
-    right: 250px;
-    top: 120px;
+    display: none;
   }
+}
+
+.aside-wrapper {
+  position: fixed;
+  right: 250px;
+  top: 120px;
 }
 
 .aside-wrapper > .recommend-aside {
