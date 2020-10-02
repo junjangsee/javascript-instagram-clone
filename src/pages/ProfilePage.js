@@ -8,6 +8,7 @@ const Post = require('../components/profile/Post');
 const Footer = require('../components/Footer');
 const Button = require('../components/shared/Button');
 const Image = require('../components/shared/Image');
+const ProfileContainer = require('../containers/ProfileContainer');
 const { profileInfo, footers } = require('./mocks/datas');
 
 class ProfilePage extends Page {
@@ -67,7 +68,8 @@ class ProfilePage extends Page {
     new Profile(container, profileInfo);
     new Story(container, profileInfo.stories);
     new Tab(container);
-    new Post(container, profileInfo.posts, router);
+    new Post(container, profileInfo.posts);
+    new ProfileContainer({ parent: container, router: router, posts: profileInfo.posts });
     new Footer({ parent: containerWrapper, footers: footers });
   }
 }

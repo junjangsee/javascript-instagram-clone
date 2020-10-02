@@ -7,35 +7,6 @@ class Post extends Component {
     this.router = router;
   }
 
-  mount() {
-    this.getPostIds().forEach((postId) => {
-      document.querySelector(`#post_${postId}`).addEventListener('click', () => {
-        this.router.setData(this.getPostInfo(postId));
-        this.router.push('/post');
-      });
-    });
-  }
-
-  getPostIds() {
-    const posts = this.posts.map((post) => {
-      return post.id;
-    });
-
-    return posts;
-  }
-
-  getPostInfo(postId) {
-    const postInfo = this.posts.reduce((acc, curr) => {
-      if (curr.id === postId) {
-        acc.push(curr);
-      }
-
-      return acc;
-    }, []);
-
-    return postInfo;
-  }
-
   getSeparatePosts() {
     const postLength = this.posts.length;
     const allPosts = [];

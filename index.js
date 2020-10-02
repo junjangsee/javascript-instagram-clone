@@ -4,10 +4,10 @@ const ProfilePage = require('./src/pages/ProfilePage');
 const PostPage = require('./src/pages/PostPage');
 
 const pages = [
-  { page: MainPage, path: '/' },
   { page: ProfilePage, path: '/profile' },
   { page: PostPage, path: '/post' },
+  { page: MainPage, path: '/' },
 ];
 
 const router = new Router({ pages: pages });
-router.push(pages[0].path);
+router.push('/');

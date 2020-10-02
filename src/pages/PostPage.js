@@ -5,8 +5,8 @@ const Button = require('../components/shared/Button');
 const Image = require('../components/shared/Image');
 
 class PostPage extends Page {
-  constructor({ router, datas }) {
-    super(router, datas);
+  constructor({ router }) {
+    super(router);
 
     const postWrapper = new Container({ tag: 'div', className: 'post-wrapper' });
     const exitButton = new Button({
@@ -18,7 +18,7 @@ class PostPage extends Page {
     });
     new Image({ parent: exitButton, src: '../src/images/exit.png' });
     const post = new Container({ parent: postWrapper, tag: 'div', className: 'post' });
-    new PostContainer({ parent: post, postInfo: datas });
+    new PostContainer({ parent: post, router: router });
   }
 }
 
