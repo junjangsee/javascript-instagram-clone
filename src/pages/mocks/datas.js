@@ -1,3 +1,38 @@
+const feeds = [
+  {
+    nickname: 'junjangsee',
+    name: '김준형',
+    thumbnail:
+      'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
+    images: [
+      {
+        id: 1,
+        image: '/src/images/background.jpg',
+      },
+      {
+        id: 2,
+        image:
+          'https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F24283C3858F778CA2E',
+      },
+    ],
+    likes: ['olaf', 'goodjoob'],
+    content: '컴포넌트를 분리하는 것은 아주 중요합니다. 번들링 개념 또한 중요하죠',
+    comments: [
+      {
+        id: 1,
+        nickname: 'olaf',
+        comment: '열심히 하고 있군요!',
+      },
+      {
+        id: 2,
+        nickname: 'goodjoob',
+        comment: '화이팅하세요!',
+      },
+    ],
+    date: '2020-09-01',
+  },
+];
+
 const profileInfo = {
   nickname: 'junjangsee',
   name: '김준형',
@@ -234,4 +269,4 @@ const footers = [
   '언어',
 ];
 
-module.exports = { footers, people, followers, profileInfo };
+module.exports = { footers, people, followers, profileInfo, feeds };
