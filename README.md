@@ -63,7 +63,21 @@ build/index.html
 
 <br/>
 
+## 작업 페이지
+
+### 메인
+
+![mainpage](./src/images/mainpage.png)
+
+### 프로필
+
+![profilepage](./src/images/profilepage.png)
+
+### 게시글
+
+![postpage](./src/images/postpage.png)
+
 ## 작업 내용
 
 - [Issues](https://github.com/junjangsee/instagram-clone/issues?q=is%3Aissue+is%3Aclosed)
-- [Pull Request](https://github.com/junjangsee/instagram-clone/pulls?q=is%3Apr+is%3Aclosed)
+- [Pull Requests](https://github.com/junjangsee/instagram-clone/pulls?q=is%3Apr+is%3Aclosed)
