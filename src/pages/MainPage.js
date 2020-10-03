@@ -4,8 +4,7 @@ const Page = require('../lib/Page');
 const Container = require('../components/shared/Container');
 const FeedContainer = require('../containers/FeedContainer');
 const RecommendContainer = require('../containers/RecommendContainer');
-const { profileInfo, followers, footers, people } = require('./mocks/datas');
-const feeds = require('../../data.json');
+const { profileInfo, followers, footers, people, feeds } = require('./mocks/datas');
 const Button = require('../components/shared/Button');
 const Image = require('../components/shared/Image');
 
