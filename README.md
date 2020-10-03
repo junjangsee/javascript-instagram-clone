@@ -2,14 +2,10 @@
 
 인스타그램 메인 페이지, 프로필 페이지, 상세 페이지를 클론합니다.
 
-<br/>
-
 ## 기술 스택
 
 - Language: HTML, CSS, Javascript
 - Library: Browserify
-
-<br/>
 
 ## 설치
 
@@ -20,15 +16,11 @@ $ npm install
 $ npm run build
 ```
 
-<br/>
-
 ## 실행
 
 ```text
 build/index.html
 ```
-
-<br/>
 
 ## 프로젝트 구조
 
@@ -60,8 +52,6 @@ build/index.html
 +-- index.js (최초 라우팅)
 .
 ```
-
-<br/>
 
 ## 작업 내용
 
