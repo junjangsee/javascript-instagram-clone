@@ -7,6 +7,7 @@ const RecommendContainer = require('../containers/RecommendContainer');
 const { profileInfo, followers, footers, people, feeds } = require('./mocks/datas');
 const Button = require('../components/shared/Button');
 const Image = require('../components/shared/Image');
+const API = require('../lib/API');
 
 class MainPage extends Page {
   constructor({ router }) {
@@ -61,9 +62,13 @@ class MainPage extends Page {
     const main = new Container({ parent: mainWrapper, tag: 'div', className: 'main' });
     new Realtime({ parent: main, people: people });
 
+    const api = new API('http://localhost:3000/feeds');
+    api.get().then((data) => console.log(data));
+
     feeds.forEach((data) => {
       new FeedContainer(main, data, footers);
     });
+
     const asideContainer = new Container({
       parent: main,
       tag: 'aside',
