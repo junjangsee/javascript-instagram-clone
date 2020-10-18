@@ -6,14 +6,14 @@ const Carousel = require('../lib/Carousel');
 const Component = require('../lib/Component');
 
 class FeedContainer extends Component {
-  constructor(parent, data, footers) {
+  constructor(parent, data) {
     super(parent);
-    const feed = new Feed({
+    this.parent = parent;
+    this.feed = new Feed({
       parent: parent,
-      header: { nickname: data.nickname, thumbnail: data.thumbnail },
-      footers,
+      header: { nickname: data.nickname, thumbnail: data.thumbnail }
     });
-    const carousel = new Carousel(feed, data.images, 0);
+    const carousel = new Carousel(this.feed, data.images, 0);
     const prevButton = new Button({
       parent: carousel,
       type: 'button',
@@ -28,7 +28,40 @@ class FeedContainer extends Component {
       onClick: carousel.next,
     });
     new Image({ parent: nextButton, src: '../../src/images/right-arrow.png' });
-    new Detail(feed, data.nickname, data.likes, data.content, data.comments, data.date);
+    new Detail(this.feed, data.nickname, data.likes, data.content, data.comments, data.date);
+  }
+
+  reRender(data) {
+    const feedWrapper = document.getElementById(this.feed.id).parentElement;
+    feedWrapper.innerHTML = '';
+
+    this.feed = new Feed({
+      parent: this.parent,
+      header: { nickname: data[0].nickname, thumbnail: data[0].thumbnail }
+    });
+
+    this.create(data[0]);
+    feedWrapper.innerHTML += this.feed.render();
+    this.feed.mount();
+  }
+
+  create(data) {
+    const carousel = new Carousel(this.feed, data.images, 0);
+    const prevButton = new Button({
+      parent: carousel,
+      type: 'button',
+      className: 'prev',
+      onClick: carousel.prev,
+    });
+    new Image({ parent: prevButton, src: '../../src/images/left-arrow.png' });
+    const nextButton = new Button({
+      parent: carousel,
+      type: 'button',
+      className: 'next',
+      onClick: carousel.next,
+    });
+    new Image({ parent: nextButton, src: '../../src/images/right-arrow.png' });
+    new Detail(this.feed, data.nickname, data.likes, data.content, data.comments, data.date);
   }
 
   render() {

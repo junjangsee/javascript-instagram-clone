@@ -8,7 +8,7 @@ class Feed extends Component {
   }
 
   render() {
-    return `<article class="feed">
+    return `<article class="feed" id="${this.id}">
               <header class="feed-header">
                 <div class="user-profile">
                   <a class="thumbnail" href="">

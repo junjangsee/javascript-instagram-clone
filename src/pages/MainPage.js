@@ -12,6 +12,7 @@ const API = require('../lib/API');
 class MainPage extends Page {
   constructor({ router }) {
     super(router);
+    this.feeds = [];
     const header = new Header();
     const homeButton = new Button({
       parent: header,
@@ -62,11 +63,18 @@ class MainPage extends Page {
     const main = new Container({ parent: mainWrapper, tag: 'div', className: 'main' });
     new Realtime({ parent: main, people: people });
 
-    const api = new API('http://localhost:3000/feeds');
-    api.get().then((data) => console.log(data));
+    const feedWrapper = new Container({ parent: main, tag: 'div', className: 'feed-wrapper' });
 
     feeds.forEach((data) => {
-      new FeedContainer(main, data, footers);
+      const feedContainer = new FeedContainer(feedWrapper, data);
+      this.feeds.push(feedContainer);
+    });
+
+    const api = new API('http://localhost:3000/feeds');
+    api.get().then((data) => {
+      this.feeds.forEach((feed) => {
+        feed.reRender(JSON.parse(data));
+      })
     });
 
     const asideContainer = new Container({
